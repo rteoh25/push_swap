@@ -39,35 +39,6 @@ t_stack	*fill_stack_values(int ac, char **av)
 	return (stack_a);
 }
 
-// void	assign_index(t_stack *stack_a, int	stack_size)
-// {
-// 	t_stack *tmp;
-//     t_stack *highest;
-//     long int max_value;
-
-// 	tmp = stack_a;
-// 	while (stack_size > 0)
-// 	{
-// 		highest = NULL;
-// 		max_value = INT_MIN;
-// 		while (tmp)
-// 		{
-// 			if (tmp->value > max_value && tmp->index == 0)
-// 			{
-// 			max_value = tmp->value;
-// 			highest = tmp;
-// 			}
-// 			tmp->index = stack_size;
-// 			tmp = tmp->next;
-// 		}
-// 		if (highest != NULL)
-// 		{
-// 			highest->index = stack_size;
-// 			stack_size--;
-// 		}
-// 	}
-// }
-
 void	assign_index(t_stack *stack_a, int i)
 {
 	t_stack	*ptr;
@@ -81,8 +52,6 @@ void	assign_index(t_stack *stack_a, int i)
 		highest = NULL;
 		while (ptr)
 		{
-			// if (ptr->value == INT_MIN && ptr->index == 0)
-			// 	ptr->index = 1;
 			if (ptr->value > value && ptr->index == 0)
 			{
 				value = ptr->value;

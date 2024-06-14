@@ -56,7 +56,9 @@ int	main(int ac, char **av)
 	char	*line;
 
 	stack_b = NULL;
-	if (ac < 2 || (ac == 2 && (av[1] == NULL)) || av[1][0] == '\0')
+	if (ac < 2)
+		return (0);
+	if ((ac == 2 && (av[1] == NULL)) || av[1][0] == '\0')
 		exit_error(NULL, NULL);
 	if (ac == 2)
 		av = make_input(av);
@@ -67,19 +69,11 @@ int	main(int ac, char **av)
 	while (line)
 	{
 		if (line_error(line) == -1)
-		{
-			free(line);
 			exit_error(&stack_a, &stack_b);
-		}
 		exe_com(line, &stack_a, &stack_b);
 		free(line);
 		line = get_next_line(STDIN_FILENO);
 	}
 	check_stack(&stack_a, &stack_b, get_stack_size(stack_a));
-	free(line);
-	free_stack(&stack_a);
-	free_stack(&stack_b);
-	if (line)
-		printf("hello");
 	return (0);
 }

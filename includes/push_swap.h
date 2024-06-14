@@ -94,6 +94,6 @@ void	do_optimal_move(t_stack **stack_a, t_stack **stack_b);
 void	do_move(t_stack **a, t_stack **b, int cost_a, int cost_b);
 
 void	free_arr(char **av);
-int	line_error(char *line);
+int		line_error(char *line);
 
 #endif

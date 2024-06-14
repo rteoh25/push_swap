@@ -29,7 +29,9 @@ int	main(int ac, char **av)
 	int		stack_size;
 
 	stack_b = NULL;
-	if (ac < 2 || (ac == 2 && (av[1] == NULL)) || av[1][0] == '\0')
+	if (ac < 2)
+		return (0);
+	if ((ac == 2 && (av[1] == NULL)) || av[1][0] == '\0')
 		exit_error(NULL, NULL);
 	if (ac == 2)
 		av = make_input(av);

@@ -6,7 +6,7 @@
 /*   By: rteoh <rteoh@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:31:21 by rteoh             #+#    #+#             */
-/*   Updated: 2024/05/30 13:46:49 by rteoh            ###   ########.fr       */
+/*   Updated: 2024/06/13 14:40:21 by rteoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,10 @@ char	*get_new_buff(char *read_buff)
 	while (read_buff[i] && read_buff[i] != '\n')
 		i++;
 	if (!read_buff[i])
+	{
+		free (read_buff);
 		return (NULL);
+	}
 	buff = (char *)malloc(ft_strlen(read_buff) - i + 1);
 	if (!buff)
 		return (NULL);
