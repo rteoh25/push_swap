@@ -58,7 +58,7 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	if (ac < 2)
 		return (0);
-	if (av[1] == NULL) || av[1][0] == '\0')
+	if ((av[1] == NULL) || av[1][0] == '\0')
 		exit_error(NULL, NULL);
 	if (ac == 2)
 		av = make_input(av);
