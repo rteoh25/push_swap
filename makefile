@@ -6,7 +6,7 @@
 #    By: rteoh <rteoh@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/14 11:32:43 by rteoh             #+#    #+#              #
-#    Updated: 2024/05/28 19:44:28 by rteoh            ###   ########.fr        #
+#    Updated: 2024/06/19 15:54:17 by rteoh            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		= push_swap
 NAME_BNS	= checker
 CC			= gcc
 RM			= rm -rf
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -Werror -fsanitize=address -g3
 INCLUDE		= -I ./includes
 
 OBJ_DIR		= obj/

@@ -19,7 +19,7 @@ int	line_error(char *line)
 	i = 0;
 	if (!line)
 		return (-1);
-	if (line[i] == '\0')
+	if (line[i] == '\0' || line[i] == '\n')
 		return (-1);
 	while (line[i])
 	{

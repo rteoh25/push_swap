@@ -17,9 +17,13 @@ static void	rotate(t_stack **stack)
 	t_stack	*tmp;
 	t_stack	*tail;
 
+	if (get_stack_size(*stack) < 2)
+		return ;
 	tmp = *stack;
 	*stack = (*stack)->next;
 	tail = move_ptr_last(*stack);
+	if (!tail)
+		return ;
 	tmp->next = NULL;
 	tail->next = tmp;
 }

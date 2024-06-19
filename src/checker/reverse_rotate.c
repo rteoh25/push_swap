@@ -18,6 +18,8 @@ static void	rev_rotate(t_stack **stack)
 	t_stack	*second_last_node;
 	t_stack	*tail;
 
+	if (get_stack_size(*stack) < 2)
+		return ;
 	tail = move_ptr_last(*stack);
 	second_last_node = find_second_last(*stack);
 	tmp = *stack;
