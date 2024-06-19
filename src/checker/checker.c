@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-static void	check_stack(t_stack **stack_a, t_stack **stack_b, int len)
+static void	check_stack(t_stack **stack_a, t_stack **stack_b)
 {
-	if (!is_sorted(*stack_a) && get_stack_size(*stack_a) == len)
+	if (!is_sorted(*stack_a) && get_stack_size(*stack_b) == 0)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
@@ -74,6 +74,6 @@ int	main(int ac, char **av)
 		free(line);
 		line = get_next_line(STDIN_FILENO);
 	}
-	check_stack(&stack_a, &stack_b, get_stack_size(stack_a));
+	check_stack(&stack_a, &stack_b);
 	return (0);
 }
