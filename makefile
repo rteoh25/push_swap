@@ -14,7 +14,7 @@ NAME		= push_swap
 NAME_BNS	= checker
 CC			= gcc
 RM			= rm -rf
-CFLAGS		= -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS		= -Wall -Wextra -Werror
 INCLUDE		= -I ./includes
 
 OBJ_DIR		= obj/
