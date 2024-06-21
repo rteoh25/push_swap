@@ -69,6 +69,8 @@ int	is_correct_input(char **av)
 
 	nb_zeros = 0;
 	i = 1;
+	if (av[1] == NULL)
+		return (-1);
 	while (av[i])
 	{
 		if (arg_is_number(av[i]))

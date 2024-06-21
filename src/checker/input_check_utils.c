@@ -14,22 +14,29 @@
 
 int	line_error(char *line)
 {
-	int	i;
-
-	i = 0;
-	if (!line)
-		return (-1);
-	if (line[i] == '\0' || line[i] == '\n')
-		return (-1);
-	while (line[i])
-	{
-		if (line[i] >= 65 && line [i] <= 90)
-			return (-1);
-		if (line[i] == 32)
-			return (-1);
-		i++;
-	}
-	return (0);
+	if (!(ft_strncmp(line, "sa", 2)))
+		return (0);
+	else if (!(ft_strncmp(line, "sb", 2)))
+		return (0);
+	else if (!(ft_strncmp(line, "ss", 2)))
+		return (0);
+	else if (!(ft_strncmp(line, "pa", 2)))
+		return (0);
+	else if (!(ft_strncmp(line, "pb", 2)))
+		return (0);
+	else if (!(ft_strncmp(line, "ra", 2)))
+		return (0);
+	else if (!(ft_strncmp(line, "rb", 2)))
+		return (0);
+	else if (!(ft_strncmp(line, "rr\n", 3)))
+		return (0);
+	else if (!(ft_strncmp(line, "rra", 3)))
+		return (0);
+	else if (!(ft_strncmp(line, "rrb", 3)))
+		return (0);
+	else if (!(ft_strncmp(line, "rrr", 3)))
+		return (0);
+	return (-1);
 }
 
 int	arg_cmp(char *s1, char *s2)
